@@ -15,7 +15,7 @@ type Block = Coordinates &
 
 type TextBlockProps = Block & {
   type: "text";
-  value: Array<string>;
+  value: string;
   fontSize: number;
   fontFamily: string;
   color: string;
@@ -40,6 +40,8 @@ type CircleProps = GraphicObject & {
 type RectangleProps = GraphicObject & {
   type: "rectangle";
 };
+
+
 type FilterProps = {
   name: string;
   type: "filter";

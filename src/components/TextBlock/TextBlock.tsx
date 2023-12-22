@@ -1,17 +1,26 @@
 import { TextBlockProps } from "../../types.tsx";
-import styles from "./TextBlock.module.css";
+import styles from "./text.module.css";
 
 const TextBlockComponent = (data: TextBlockProps) => {
+  const textBlockData = {
+    id: data.id,
+    type: data.type,
+    data: data.value,
+  };
+
+  const styleProps = {
+    width: `${data.width}px`,
+    height: `${data.height}px`,
+    fontSize: `${data.fontSize}px`,
+    fontFamily: `${data.fontFamily}`,
+    color: `${data.color}`,
+    fontWeight: data.bold ? "900" : "300",
+    top: `${data.yPos}px`,
+    left: `${data.xPos}px`,
+  };
+
   return (
-    <div className={styles.canvas}>
-      <h3>Text Block</h3>
-      <p>ID: {data.id}</p>
-      <p>Text: {data.value.join(" ")}</p>
-      <p>Font Size: {data.fontSize}</p>
-      <p>Font Family: {data.fontFamily}</p>
-      <p>Color: {data.color}</p>
-      <p>Bold: {data.bold ? "Yes" : "No"}</p>
-    </div>
+    <div style={styleProps} className={styles.text}>{textBlockData.data}</div>
   );
 };
 

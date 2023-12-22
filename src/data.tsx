@@ -44,7 +44,7 @@ const redFilter: FilterProps = {
 const filterCollection: FilterCollection = [greenFilter, blueFilter, redFilter];
 
 const page1: CanvasProps = {
-  // Минимальные данные
+  // Min data
   id: "page1",
   width: 800,
   height: 600,
@@ -54,8 +54,8 @@ const page1: CanvasProps = {
 };
 
 const page2: CanvasProps = {
-  // Не все элементы могут быть в коллекциях
-  id: "page1",
+  // Mid data
+  id: "page2",
   width: 800,
   height: 600,
   xPos: 50,
@@ -64,7 +64,7 @@ const page2: CanvasProps = {
     {
       id: "text1",
       type: "text",
-      value: ["Hello"],
+      value: "Text1",
       fontSize: 20,
       fontFamily: "Roboto",
       color: "#000000",
@@ -77,14 +77,14 @@ const page2: CanvasProps = {
     {
       id: "text2",
       type: "text",
-      value: ["Hello"],
+      value: "Text2",
       fontSize: 17,
       fontFamily: "Roboto",
       color: "#565656",
       bold: true,
       width: 200,
       height: 100,
-      xPos: 100,
+      xPos: 0,
       yPos: 100,
     },
     {
@@ -94,15 +94,15 @@ const page2: CanvasProps = {
       height: 300,
       xPos: 300,
       yPos: 300,
-      url: "1.png",
+      url: "spike.jpg",
       allowedFormat: ["JPG", "JPEG", "PNG"],
     },
   ],
 };
 
 const page3: CanvasProps = {
-  // Максимальные данные для Page
-  id: "page1",
+  // Max data
+  id: "page3",
   width: 800,
   height: 600,
   xPos: 50,
@@ -111,7 +111,7 @@ const page3: CanvasProps = {
     {
       id: "text1",
       type: "text",
-      value: ["Hello"],
+      value: "It is Spike",
       fontSize: 20,
       fontFamily: "Roboto",
       color: "#000000",
@@ -124,14 +124,14 @@ const page3: CanvasProps = {
     {
       id: "text2",
       type: "text",
-      value: ["Hello"],
+      value: "DEDwddwa",
       fontSize: 17,
       fontFamily: "Roboto",
       color: "#565656",
       bold: true,
       width: 200,
       height: 100,
-      xPos: 100,
+      xPos: 0,
       yPos: 100,
     },
     {
@@ -141,13 +141,13 @@ const page3: CanvasProps = {
       height: 300,
       xPos: 300,
       yPos: 300,
-      url: "1.png",
+      url: "../../src/img/like.png",
       allowedFormat: ["JPG", "JPEG", "PNG"],
     },
     {
       id: "circle1",
       type: "circle",
-      backgroundColor: "#000000",
+      backgroundColor: "#2DE209",
       backgroundImage: "",
       width: 300,
       height: 300,
@@ -183,7 +183,7 @@ const template1: TemplateProps = {
     {
       id: "text1",
       type: "text",
-      value: ["Hello"],
+      value: "It is Spike!",
       fontSize: 23,
       fontFamily: "Roboto",
       color: "#000000",
@@ -192,19 +192,6 @@ const template1: TemplateProps = {
       height: 100,
       xPos: 300,
       yPos: 100,
-    },
-    {
-      id: "text2",
-      type: "text",
-      value: ["Hello"],
-      fontSize: 30,
-      fontFamily: "Roboto",
-      color: "#000000",
-      bold: true,
-      width: 400,
-      height: 100,
-      xPos: 350,
-      yPos: 490,
     },
     {
       id: "img1",
@@ -213,20 +200,20 @@ const template1: TemplateProps = {
       height: 300,
       xPos: 250,
       yPos: 150,
-      url: "1.png",
+      url: "../../src/img/spike.jpg",
       allowedFormat: ["JPG", "JPEG", "PNG"],
     },
   ],
 };
 
 const template2: TemplateProps = {
-  id: "template1",
-  name: "template1",
+  id: "template2",
+  name: "template2",
   blocks: [
     {
       id: "text1",
       type: "text",
-      value: ["Hello"],
+      value: "Is crazy pug and green circle",
       fontSize: 23,
       fontFamily: "Roboto",
       color: "#000000",
@@ -237,17 +224,14 @@ const template2: TemplateProps = {
       yPos: 100,
     },
     {
-      id: "text2",
-      type: "text",
-      value: ["Hello"],
-      fontSize: 30,
-      fontFamily: "Roboto",
-      color: "#000000",
-      bold: true,
-      width: 530,
+      id: "circle1",
+      type: "circle",
+      backgroundColor: "#197C0A",
+      backgroundImage: "",
+      width: 100,
       height: 100,
-      xPos: 250,
-      yPos: 490,
+      xPos: 0,
+      yPos: 500,
     },
     {
       id: "img1",
@@ -256,20 +240,20 @@ const template2: TemplateProps = {
       height: 200,
       xPos: 300,
       yPos: 200,
-      url: "2.png",
+      url: "../../src/img/crazy-pug.jpg",
       allowedFormat: ["JPG", "JPEG", "PNG"],
     },
   ],
 };
 
 const template3: TemplateProps = {
-  id: "template1",
-  name: "template1",
+  id: "template3",
+  name: "template3",
   blocks: [
     {
       id: "text1",
       type: "text",
-      value: ["Hello"],
+      value: "LIKE! Green filter, black circle and yellow rectangle",
       fontSize: 23,
       fontFamily: "Roboto",
       color: "#000000",
@@ -280,34 +264,42 @@ const template3: TemplateProps = {
       yPos: 100,
     },
     {
-      id: "text2",
-      type: "text",
-      value: ["Hello"],
-      fontSize: 30,
-      fontFamily: "Roboto",
-      color: "#565656",
-      bold: true,
-      width: 530,
-      height: 100,
-      xPos: 250,
-      yPos: 490,
-    },
-    {
       id: "img1",
       type: "image",
-      width: 200,
-      height: 200,
-      xPos: 300,
+      width: 300,
+      height: 300,
+      xPos: 250,
       yPos: 200,
-      url: "3.png",
+      url: "../../src/img/like.png",
       allowedFormat: ["JPG", "JPEG", "PNG"],
     },
+    {
+      id: "circle1",
+      type: "circle",
+      backgroundColor: "#000000",
+      backgroundImage: "",
+      width: 100,
+      height: 100,
+      xPos: 0,
+      yPos: 500,
+    },
+    {
+      id: "rectangle1",
+      type: "rectangle",
+      backgroundColor: "#F6EC5A",
+      backgroundImage: "",
+      width: 200,
+      height: 200,
+      xPos: 600,
+      yPos: 0,
+    },
+    greenFilter,
   ],
 };
 
 const page4: CanvasProps = {
   // Максимальные данные для page
-  id: "page1",
+  id: "page4",
   width: 800,
   height: 600,
   xPos: 50,
@@ -317,7 +309,7 @@ const page4: CanvasProps = {
 
 const page5: CanvasProps = {
   // Максимальные данные для page
-  id: "page1",
+  id: "page5",
   width: 800,
   height: 600,
   xPos: 50,
@@ -327,7 +319,7 @@ const page5: CanvasProps = {
 
 const page6: CanvasProps = {
   // Максимальные данные для page
-  id: "page1",
+  id: "page6",
   width: 800,
   height: 600,
   xPos: 50,
@@ -340,7 +332,7 @@ const templateCollection: TemplatesCollection = {
 };
 
 const historyCommands: HistoryCommands = {
-  indexOfHistory: 4,
+  indexOfHistory: 1,
   history: [page1, page2, page3, page4, page5, page6],
 };
 
