@@ -1,0 +1,13 @@
+li {
+  list-style: none;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+.toolsImg {
+  width: 40px;
+  height: auto;
+}

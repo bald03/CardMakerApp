@@ -94,7 +94,7 @@ const page2: CanvasProps = {
       height: 300,
       xPos: 300,
       yPos: 300,
-      url: "spike.jpg",
+      url: "/img/spike.jpg",
       allowedFormat: ["JPG", "JPEG", "PNG"],
     },
   ],
@@ -141,7 +141,7 @@ const page3: CanvasProps = {
       height: 300,
       xPos: 300,
       yPos: 300,
-      url: "../../src/img/like.png",
+      url: "/img/spike.jpg",
       allowedFormat: ["JPG", "JPEG", "PNG"],
     },
     {
@@ -164,7 +164,7 @@ const page3: CanvasProps = {
       xPos: 600,
       yPos: 0,
     },
-    greenFilter,
+    blueFilter,
   ],
 };
 
@@ -200,7 +200,7 @@ const template1: TemplateProps = {
       height: 300,
       xPos: 250,
       yPos: 150,
-      url: "../../src/img/spike.jpg",
+      url: "/img/spike.jpg",
       allowedFormat: ["JPG", "JPEG", "PNG"],
     },
   ],
@@ -240,7 +240,7 @@ const template2: TemplateProps = {
       height: 200,
       xPos: 300,
       yPos: 200,
-      url: "../../src/img/crazy-pug.jpg",
+      url: "/img/crazy-pug.jpg",
       allowedFormat: ["JPG", "JPEG", "PNG"],
     },
   ],
@@ -270,7 +270,7 @@ const template3: TemplateProps = {
       height: 300,
       xPos: 250,
       yPos: 200,
-      url: "../../src/img/like.png",
+      url: "/img/like.png",
       allowedFormat: ["JPG", "JPEG", "PNG"],
     },
     {
@@ -332,7 +332,7 @@ const templateCollection: TemplatesCollection = {
 };
 
 const historyCommands: HistoryCommands = {
-  indexOfHistory: 1,
+  indexOfHistory: 3,
   history: [page1, page2, page3, page4, page5, page6],
 };
 
