@@ -20,7 +20,9 @@ const TextBlockComponent = (data: TextBlockProps) => {
   };
 
   return (
-    <div style={styleProps} className={styles.text}>{textBlockData.data}</div>
+    <div style={styleProps} className={styles.text}>
+      {textBlockData.data}
+    </div>
   );
 };
 
