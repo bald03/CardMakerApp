@@ -1,96 +1,21 @@
-type Coordinates = {
-  xPos: number;
-  yPos: number;
-};
-
-type Size = {
-  width: number;
-  height: number;
-};
-
-type Block = Coordinates &
-  Size & {
-    id: string;
-  };
-
-type TextBlockProps = Block & {
-  type: "text";
-  value: Array<string>;
-  fontSize: number;
-  fontFamily: string;
-  color: string;
-  bold: boolean;
-};
-
-type GraphicObject = Block & {
-  backgroundImage: string;
-  backgroundColor: string;
-};
-
-type ImageBlockProps = Block & {
-  type: "image";
-  url: string;
-  allowedFormat: Array<string>;
-};
-
-type CircleProps = GraphicObject & {
-  type: "circle";
-};
-
-type RectangleProps = GraphicObject & {
-  type: "rectangle";
-};
-type FilterProps = {
-  name: string;
-  type: "filter";
-  id: string;
-  colorOfFilter: string;
-  opacity: number;
-};
-
-type FilterCollection = Array<FilterProps>;
-
-type SelectionAreaProps = Block;
-
-type TemplateProps = {
-  id: string;
-  name: string;
-  blocks: Array<
-    | TextBlockProps
-    | ImageBlockProps
-    | FilterProps
-    | CircleProps
-    | RectangleProps
-  >;
-};
-
-type TemplatesCollection = {
-  templates: Array<TemplateProps>;
-};
-
-type PageProps = Block & {
-  id: string;
-  elements: Array<
-    | TextBlockProps
-    | ImageBlockProps
-    | FilterProps
-    | CircleProps
-    | RectangleProps
-  >;
-};
-
-type HistoryCommands = {
-  indexOfHistory: number;
-  history: Array<PageProps>;
-};
-
-type Doc = {
-  page: PageProps;
-  templateCollection: TemplatesCollection;
-  historyCommands: HistoryCommands;
-  filterCollection: FilterCollection;
-  selectionArea: SelectionAreaProps;
-};
+import {
+  Doc,
+  TextBlockProps,
+  Coordinates,
+  Size,
+  Block,
+  GraphicObject,
+  ImageBlockProps,
+  CircleProps,
+  RectangleProps,
+  FilterProps,
+  SelectionAreaProps,
+  TemplateProps,
+  TemplatesCollection,
+  CanvasProps,
+  HistoryCommands,
+  FilterCollection,
+} from "./types.tsx";
 
 const greenFilter: FilterProps = {
   colorOfFilter: "#00ff00",
@@ -118,7 +43,7 @@ const redFilter: FilterProps = {
 
 const filterCollection: FilterCollection = [greenFilter, blueFilter, redFilter];
 
-const page1: PageProps = {
+const page1: CanvasProps = {
   // Минимальные данные
   id: "page1",
   width: 800,
@@ -128,7 +53,7 @@ const page1: PageProps = {
   elements: [],
 };
 
-const page2: PageProps = {
+const page2: CanvasProps = {
   // Не все элементы могут быть в коллекциях
   id: "page1",
   width: 800,
@@ -175,7 +100,7 @@ const page2: PageProps = {
   ],
 };
 
-const page3: PageProps = {
+const page3: CanvasProps = {
   // Максимальные данные для Page
   id: "page1",
   width: 800,
@@ -380,7 +305,7 @@ const template3: TemplateProps = {
   ],
 };
 
-const page4: PageProps = {
+const page4: CanvasProps = {
   // Максимальные данные для page
   id: "page1",
   width: 800,
@@ -390,7 +315,7 @@ const page4: PageProps = {
   elements: [...template1.blocks],
 };
 
-const page5: PageProps = {
+const page5: CanvasProps = {
   // Максимальные данные для page
   id: "page1",
   width: 800,
@@ -400,7 +325,7 @@ const page5: PageProps = {
   elements: [...template2.blocks],
 };
 
-const page6: PageProps = {
+const page6: CanvasProps = {
   // Максимальные данные для page
   id: "page1",
   width: 800,
@@ -420,7 +345,7 @@ const historyCommands: HistoryCommands = {
 };
 
 const doc: Doc = {
-  page: historyCommands.history[historyCommands.indexOfHistory],
+  canvas: historyCommands.history[historyCommands.indexOfHistory],
   templateCollection,
   historyCommands,
   filterCollection,
