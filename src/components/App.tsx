@@ -1,10 +1,9 @@
-import styles from"./App.module.css";
+import styles from "./App.module.css";
 import Canvas from ".././components/Canvas/Canvas";
 import doc from "../data";
 import Menu from ".././components/Menu/Menu.tsx";
 
 function App() {
-
   return (
     <div className={styles.container}>
       <header>
