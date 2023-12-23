@@ -19,25 +19,27 @@ const CanvasComponent = (data: Props) => {
     left: `${props.xPos}%`,
   };
 
-  return <div className={styles.canvas} style={styleProps}>
+  return (
+    <div className={styles.canvas} style={styleProps}>
       {props.elements.map((el) => {
-        if (el.type === 'filter') {
-          return <FilterComponent {...el}/>
+        if (el.type === "filter") {
+          return <FilterComponent {...el} />;
         }
-        if (el.type === 'text') {
-          return <TextComponent {...el}/>
+        if (el.type === "text") {
+          return <TextComponent {...el} />;
         }
-        if (el.type === 'circle') {
-          return <CircleComponent {...el}/>
+        if (el.type === "circle") {
+          return <CircleComponent {...el} />;
         }
-        if (el.type === 'rectangle') {
-          return <RectangleComponent {...el}/>
+        if (el.type === "rectangle") {
+          return <RectangleComponent {...el} />;
         }
-        if (el.type === 'image') {
-          return <ImageComponent {...el}/>
+        if (el.type === "image") {
+          return <ImageComponent {...el} />;
         }
       })}
-  </div>;
+    </div>
+  );
 };
 
 export default CanvasComponent;

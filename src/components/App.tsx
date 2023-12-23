@@ -2,23 +2,36 @@ import styles from "./App.module.css";
 import Canvas from ".././components/Canvas/Canvas";
 import doc from "../data";
 import Menu from ".././components/Menu/Menu.tsx";
+import ButtonDownload from "./ButtonDownload/ButtonDownlaod.tsx";
+import UploadData from "./UploadData/UploadData.tsx";
+import { useState } from "react";
+import { CanvasProps } from "../types.tsx";
 
 function App() {
+  const [canvas, setCanvas] = useState<CanvasProps>({
+    id: doc.canvas.id,
+    width: doc.canvas.width,
+    height: doc.canvas.height,
+    yPos: doc.canvas.yPos,
+    xPos: doc.canvas.xPos,
+    elements: [...doc.canvas.elements],
+  });
+
   return (
     <div className={styles.container}>
       <header>
         <div className={styles.logo}>
-          <img src="./../img/logo.png" className={styles.logoImg}/>
+          <img src="./../img/logo.png" className={styles.logoImg} />
         </div>
-        <nav className={styles.topMenu}>Menu</nav>
+        <nav className={styles.topMenu}></nav>
       </header>
 
       <div className={styles.leftMenu}>
-        <Menu />
+        <Menu canvas={canvas} setCanvas={setCanvas} />
       </div>
 
       <div className={styles.canvas}>
-        <Canvas props={doc.canvas} />
+        <Canvas props={canvas} />
       </div>
     </div>
   );

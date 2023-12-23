@@ -41,7 +41,6 @@ type RectangleProps = GraphicObject & {
   type: "rectangle";
 };
 
-
 type FilterProps = {
   name: string;
   type: "filter";

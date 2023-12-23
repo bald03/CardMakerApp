@@ -87,16 +87,6 @@ const page2: CanvasProps = {
       xPos: 0,
       yPos: 100,
     },
-    {
-      id: "img1",
-      type: "image",
-      width: 300,
-      height: 300,
-      xPos: 300,
-      yPos: 300,
-      url: "/img/spike.jpg",
-      allowedFormat: ["JPG", "JPEG", "PNG"],
-    },
   ],
 };
 
@@ -332,7 +322,7 @@ const templateCollection: TemplatesCollection = {
 };
 
 const historyCommands: HistoryCommands = {
-  indexOfHistory: 0,
+  indexOfHistory: 1,
   history: [page1, page2, page3, page4, page5, page6],
 };
 
