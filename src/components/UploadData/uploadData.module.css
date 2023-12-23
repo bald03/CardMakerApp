@@ -11,3 +11,9 @@
   width: 0;
   height: 0;
 }
+
+button {
+  margin: 5px;
+  background: none;
+  border: none;
+}

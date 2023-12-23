@@ -45,7 +45,7 @@ const UploadData = (props: Props) => {
     <>
     <label htmlFor="uploadInput"> <img src="/img/upload.png" className={styles.toolsImg} /></label>
       <input
-        className={styles.toolsImg}
+        className={styles.uploadData}
         id="uploadInput"
         accept=".json"
         onChange={onChange}

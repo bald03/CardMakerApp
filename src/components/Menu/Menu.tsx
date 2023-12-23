@@ -40,9 +40,7 @@ const Menu = (data: Props) => {
           </button>
         </li>
         <li>
-          <button>
             <ButtonDownload {...canvas} />
-          </button>
         </li>
         <li>
           <button>
