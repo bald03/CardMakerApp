@@ -1,4 +1,4 @@
-import Canvas from "../canvas/canvas";
+import Canvas from "../Canvas/Canvas";
 import { Dispatch, SetStateAction } from "react";
 import {
   PageProps,
@@ -7,9 +7,9 @@ import {
   CircleProps,
   RectangleProps,
   FilterProps,
-} from "../models/types";
+} from "../Models/types";
 
-import SelectionArea from "../selectionArea/selectionArea";
+import SelectionArea from "../SelectionArea/SelectionArea";
 
 import style from "./page.module.css";
 

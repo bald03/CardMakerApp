@@ -7,7 +7,7 @@ import {
   CircleProps,
   RectangleProps,
   FilterProps,
-} from "../models/types";
+} from "../Models/types";
 
 import style from "./canvas.module.css";
 

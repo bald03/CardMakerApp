@@ -1,7 +1,7 @@
 import { useState } from "react";
-import SelectionArea from "../../selectionArea/selectionArea";
+import SelectionArea from "../../SelectionArea/SelectionArea";
 
-import { RectangleProps } from "../../models/types";
+import { RectangleProps } from "../../Models/types";
 import style from "./rectangle.module.css";
 
 const Rectangle = (props: RectangleProps) => {

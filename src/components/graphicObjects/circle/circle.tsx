@@ -1,7 +1,7 @@
 import { RefObject, useState } from "react";
 
-import { CircleProps } from "../../models/types";
-import SelectionArea from "../../selectionArea/selectionArea";
+import { CircleProps } from "../../Models/types";
+import SelectionArea from "../../SelectionArea/SelectionArea";
 import style from "./circle.module.css";
 
 const Circle = (props: CircleProps) => {

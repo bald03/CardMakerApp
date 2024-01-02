@@ -7,7 +7,7 @@ import {
   CircleProps,
   RectangleProps,
   FilterProps,
-} from "../models/types";
+} from "../Models/types";
 
 type props = {
   addElement: (
@@ -62,7 +62,7 @@ const Menu = (props: props) => {
     const elem: RectangleProps = {
       id: "rectangle1",
       type: "rectangle",
-      backgroundColor: "#6aa449",
+      backgroundColor: "#2B6CC4",
       backgroundImage: "",
       width: 200,
       height: 200,
@@ -76,7 +76,7 @@ const Menu = (props: props) => {
     const elem: CircleProps = {
       id: "circle2",
       type: "circle",
-      backgroundColor: "#000000",
+      backgroundColor: "#B5A642",
       backgroundImage: "",
       width: 400,
       height: 400,
@@ -86,33 +86,18 @@ const Menu = (props: props) => {
     addElement(elem);
   };
 
-  // const addFilter = () => {
-  //   const elem: FilterProps = {
-  //     colorOfFilter: "#3fc11c",
-  //     name: "greenFilter",
-  //     type: "filter",
-  //     id: "filter1",
-  //     opacity: 0.5,
-  //     width: 800,
-  //     height: 600,
-  //     xPos: 0,
-  //     yPos: 0,
-  //   };
-  //   addElement(elem);
-  // };
-
   return (
     <div className="menu">
-      <button className="menuButton" onClick={addTextBlock}>
+      <button className={styles.menuButton} onClick={addTextBlock}>
         <img src="/img/text.png" className={styles.toolsImg} />
       </button>
-      <button className="menuButton" onClick={addCircle}>
+      <button className={styles.menuButton} onClick={addCircle}>
         <img src="/img/circle.png" className={styles.toolsImg} />
       </button>
-      <button className="menuButton" onClick={addRectangle}>
+      <button className={styles.menuButton}  onClick={addRectangle}>
         <img src="/img/rectangle.png" className={styles.toolsImg} />
       </button>
-      <button className="menuButton" onClick={addImage}>
+      <button className={styles.menuButton} onClick={addImage}>
         <img src="/img/add-image.png" className={styles.toolsImg} />
       </button>
     </div>

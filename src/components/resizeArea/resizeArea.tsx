@@ -10,7 +10,7 @@ import {
   CircleProps,
   RectangleProps,
   FilterProps,
-} from "../models/types";
+} from "../Models/types";
 
 type Props = {
   refResize: RefObject<HTMLDivElement>;
@@ -49,7 +49,7 @@ const ResizeArea = (props: Props) => {
     bottomRightControl: useRef<HTMLDivElement>(null),
   };
 
-  const resizeTopControl = (dragEvent, mouseDownEvent) => {
+  const resizeTopControl = (dragEvent: MouseEvent, mouseDownEvent: MouseEvent) => {
     refResize.current!.style.height = `${
       newElement.height - dragEvent.clientY + mouseDownEvent.clientY
     }px`;
@@ -64,7 +64,7 @@ const ResizeArea = (props: Props) => {
     }
   };
 
-  const resizeLeftControl = (dragEvent, mouseDownEvent) => {
+  const resizeLeftControl = (dragEvent: MouseEvent, mouseDownEvent: MouseEvent) => {
     refResize.current!.style.width = `${
       newElement.width - dragEvent.clientX + mouseDownEvent.clientX
     }px`;
@@ -79,13 +79,13 @@ const ResizeArea = (props: Props) => {
     }
   };
 
-  const resizeBottomControl = (dragEvent, mouseDownEvent) => {
+  const resizeBottomControl = (dragEvent: MouseEvent, mouseDownEvent: MouseEvent) => {
     refResize.current!.style.height = `${
       newElement.height + dragEvent.clientY - mouseDownEvent.clientY
     }px`;
   };
 
-  const resizeRightControl = (dragEvent, mouseDownEvent) => {
+  const resizeRightControl = (dragEvent: MouseEvent, mouseDownEvent: MouseEvent) => {
     refResize.current!.style.width = `${
       newElement.width + dragEvent.clientX - mouseDownEvent.clientX
     }px`;

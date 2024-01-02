@@ -1,6 +1,7 @@
 .toolsImg {
-  width: 40px;
-  height: auto;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0 0;
 }
 
 .uploadData {
@@ -12,8 +13,4 @@
   height: 0;
 }
 
-button {
-  margin: 5px;
-  background: none;
-  border: none;
-}
+

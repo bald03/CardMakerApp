@@ -346,14 +346,14 @@ const templateCollection: TemplatesCollection = {
 };
 
 const historyCommands: HistoryCommands = {
-  indexOfHistory: 2,
+  indexOfHistory: 0,
   history: [page1, page2, page3, page4, page5, page6],
 };
 
 const colors: Colors = [
-  "#ac00ff",
-  "#0000ff",
-  "#00ff00",
+  "#90EE90",
+  "#D77D31",
+  "#0E294B",
   "#ff0000",
   "#ffffff",
   "#000000",

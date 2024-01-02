@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { TextBlockProps } from "../models/types";
+import { TextBlockProps } from "../Models/types";
 
 import style from "./textBlock.module.css";
 

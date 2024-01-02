@@ -9,15 +9,13 @@ import {
   RectangleProps,
   FilterProps,
   MenuText as MenuTextType,
-} from "../models/types";
-import doc  from "../models/data";
-import ButtonDownload from "../buttonDownload/buttonDownload";
-import Menu from "../menu/menu";
-import Page from "../page/page";
-import LoadInput from "../loadInput/loadInput";
-import MenuText from "../menuText/menuText";
-
-// import { Page } from "../models/modelsOld";
+} from "../Models/types";
+import doc  from "../Models/data";
+import ButtonDownload from "../ButtonDownload/ButtonDownload";
+import Menu from "../Menu/Menu";
+import Page from "../Page/Page";
+import LoadInput from "../UploadData/UploadData";
+import MenuText from "../CangeTextMenu/CangeTextMenu";
 
 const App = () => {
   const [page, setPage] = useState<PageProps>({
@@ -49,16 +47,6 @@ const App = () => {
   ) => {
     setNewElement(elem);
   };
-
-  // const [stateMenuText, setStateMenuText] = useState<MenuTextType>({
-  //   color: doc.defaultMenuText.color,
-  //   fontFamily: doc.defaultMenuText.fontFamily,
-  //   bold: doc.defaultMenuText.bold,
-  //   underline: doc.defaultMenuText.underline,
-  //   italic: doc.defaultMenuText.italic,
-  //   fontSize: doc.defaultMenuText.fontSize,
-  //   value: doc.defaultMenuText.value,
-  // });
 
   return (
     <div className={styles.container}>

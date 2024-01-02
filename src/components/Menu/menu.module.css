@@ -8,6 +8,20 @@ button {
 }
 
 img {
+  box-sizing: border-box;
   width: 40px;
-  height: auto;
+  margin: 0;
+}
+
+.menu {
+  position: relative;
+}
+
+.menuButton {
+  box-sizing: border-box;
+  width: 100%;
+  display: block;
+  justify-content: center;
+  margin: 0;
+  padding: 20px 0 0;
 }

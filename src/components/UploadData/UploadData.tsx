@@ -1,6 +1,6 @@
-import { PageProps } from "../models/types";
+import { PageProps } from "../Models/types";
 import { Dispatch, SetStateAction } from "react";
-import styles from "../loadInput/loadInput.module.css";
+import styles from "../UploadData/uploadData.module.css";
 
 import { ChangeEvent } from "react";
 type Props = {
@@ -43,7 +43,7 @@ const LoadInput = (props: Props) => {
 
   return (
     <>
-    <label htmlFor="uploadInput"> <img src="/img/upload.png" className={styles.toolsImg} /></label>
+    <label htmlFor="uploadInput" className={styles.toolsImg}> <img src="/img/upload.png"  /></label>
       <input
         className={styles.uploadData}
         id="uploadInput"

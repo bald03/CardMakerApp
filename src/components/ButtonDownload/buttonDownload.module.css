@@ -3,8 +3,12 @@
   height: auto;
 }
 
-button {
-  margin: 5px;
-  background: none;
-  border: none;
+
+.menuButton {
+  box-sizing: border-box;
+  width: 100%;
+  display: block;
+  justify-content: center;
+  margin: 0;
+  padding: 20px 0 0;
 }

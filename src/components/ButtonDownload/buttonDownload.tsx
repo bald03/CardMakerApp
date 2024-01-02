@@ -1,4 +1,4 @@
-import { PageProps } from "../models/types";
+import { PageProps } from "../Models/types";
 import styles from "../ButtonDownload/buttonDownload.module.css";
 
 const ButtonDownload = (props: PageProps) => {
@@ -21,7 +21,7 @@ const ButtonDownload = (props: PageProps) => {
   };
 
   return (
-  <button onClick={downloadFile}>
+  <button className={styles.menuButton} onClick={downloadFile} >
     <img src="/img/download.png" className={styles.toolsImg} />
   </button>
   );

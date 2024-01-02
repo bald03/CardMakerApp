@@ -6,7 +6,7 @@ import {
   CircleProps,
   RectangleProps,
   FilterProps,
-} from "../models/types";
+} from "../Models/types";
 import {
   Dispatch,
   HTMLInputTypeAttribute,
@@ -15,8 +15,8 @@ import {
   ChangeEvent,
 } from "react";
 
-import {} from "../models/types";
-import styles from "./menuText.module.css";
+import {} from "../Models/types";
+import styles from "../CangeTextMenu/cangeTextMenut.module.css";
 
 type Props = {
   dataMenuText: DataMenuText;
@@ -69,7 +69,7 @@ const MenuText = (props: Props) => {
   console.log(dataMenuText);
   return (
     <div className={styles.menuText}>
-      <select onChange={changeFont} name="fontSelect" id="fontSelect">
+      <select onChange={changeFont} className={styles.fontSelect} name="fontSelect" id="fontSelect">
         {dataMenuText.fonts.map((font) => (
           <option key={font} value={font}>
             {font}
@@ -90,15 +90,27 @@ const MenuText = (props: Props) => {
           </div>
         ))}
       </div>
-      <input onChange={changeTextSize} type="number" />
+      <input onChange={changeTextSize} className={styles.textSizeSelect} type="number" />
       <input
         onChange={changeTextElement}
+        className={styles.changeText}
         type="text"
         value={newElement.value}
       />
-      <input onChange={changeTextStyle} type="checkbox" value={"bold"} />
-      <input onChange={changeTextStyle} type="checkbox" value={"italic"} />
-      <input onChange={changeTextStyle} type="checkbox" value={"underline"} />
+      <div className={styles.checkboxWraper}>
+        <label htmlFor="bold" className={styles.checkboxLabel}>Вold</label>
+        <input id="bold" onChange={changeTextStyle} className={styles.checkbox} type="checkbox" value={"bold"} />
+      </div>
+
+      <div className={styles.checkboxWraper}>
+        <label htmlFor="italic" className={styles.checkboxLabel}>Italic</label>
+        <input id="italic" onChange={changeTextStyle} className={styles.checkbox} type="checkbox" value={"italic"} />
+      </div>
+
+      <div className={styles.checkboxWraper}>
+        <label htmlFor="underline" className={styles.checkboxLabel}>Underline</label>
+        <input id="underline" onChange={changeTextStyle} className={styles.checkbox} type="checkbox" value={"underline"} />
+      </div>
     </div>
   );
 };

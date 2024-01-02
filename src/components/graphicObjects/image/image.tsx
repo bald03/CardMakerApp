@@ -1,6 +1,6 @@
 import { useState, RefObject } from "react";
-import { ImageBlockProps } from "../../models/types";
-import SelectionArea from "../../selectionArea/selectionArea";
+import { ImageBlockProps } from "../../Models/types";
+import SelectionArea from "../../SelectionArea/SelectionArea";
 import style from "./image.module.css";
 
 type Props = {

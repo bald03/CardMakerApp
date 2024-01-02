@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { FilterProps } from "../models/types";
+import { FilterProps } from "../Models/types";
 import style from "./filter.module.css";
 
 const Filter = (props: FilterProps) => {

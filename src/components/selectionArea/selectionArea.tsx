@@ -1,16 +1,16 @@
 import { useRef, useEffect } from "react";
 import styles from "./selectionArea.module.css";
 
-import TextBlock from "../textBlock/textBlock";
-import Circle from "../graphicObjects/circle/circle";
-import Rectangle from "../graphicObjects/rectangle/rectangle";
-import Image from "../graphicObjects/image/image";
-import Filter from "../filter/filter";
+import TextBlock from "../TextBlock/TextBlock";
+import Circle from "../graphicObjects/Circle/Circle";
+import Rectangle from "../graphicObjects/Rectangle/Rectangle";
+import Image from "../graphicObjects/Image/Image";
+import Filter from "../Filter/Filter";
 import { Dispatch, SetStateAction } from "react";
 
 import { useDnD } from "../../hooks/useDnD/useDnD";
 
-import ResizeArea from "../resizeArea/resizeArea";
+import ResizeArea from "../resizeArea/ResizeArea";
 
 import {
   PageProps,
@@ -20,7 +20,7 @@ import {
   RectangleProps,
   FilterProps,
   MenuText,
-} from "../models/types";
+} from "../Models/types";
 
 type Props = {
   newElement:
@@ -71,7 +71,7 @@ const SelectionArea = (props: Props) => {
   ) => {
     switch (newElement.type) {
       case "text":
-        return <TextBlock {...newElement} />; //* поменять переданные элементы на stateMenu. Может возникнуть проблема с типами.
+        return <TextBlock {...newElement} />;
       case "circle":
         return <Circle {...newElement} />;
       case "rectangle":
@@ -113,7 +113,6 @@ const SelectionArea = (props: Props) => {
         onDrag: (dragEvent: MouseEvent) => {
           dragEvent.stopPropagation();
           dragEvent.preventDefault();
-          // console.log(dragEvent, mouseDownEvent);
           ref.current!.style.top = `${
             dragEvent.clientY + (newElement.yPos - mouseDownEvent.clientY)
           }px`;
