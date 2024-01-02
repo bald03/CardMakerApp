@@ -8,13 +8,14 @@ type Size = {
   height: number;
 };
 
-type Block = Coordinates &
-  Size & {
-    id: string;
-  };
+type Block = Coordinates & Size;
 
-  type TextBlockProps = Coordinates &
-  Block & {
+type Info = {
+  id: string;
+};
+
+type TextBlockProps = Coordinates &
+  Info & {
     type: "text";
     value: string;
     width: number;
@@ -27,13 +28,14 @@ type Block = Coordinates &
     underline: boolean;
   };
 
-type GraphicObject = Block & {
-  backgroundImage: string;
-  backgroundColor: string;
-};
+type GraphicObject = Block &
+  Info & {
+    backgroundImage: string;
+    backgroundColor: string;
+  };
 
 type ImageBlockProps = Block &
-  Block & {
+  Info & {
     type: "image";
     url: string;
     allowedFormat: Array<string>;
@@ -47,7 +49,6 @@ type CircleProps = GraphicObject & {
 type RectangleProps = GraphicObject & {
   type: "rectangle";
 };
-
 type FilterProps = Block & {
   name: string;
   type: "filter";
@@ -58,7 +59,9 @@ type FilterProps = Block & {
 
 type FilterCollection = Array<FilterProps>;
 
-type SelectionAreaProps = Block;
+type SelectionAreaProps = Block & {
+  type: "selectionArea";
+};
 
 type TemplateProps = {
   id: string;
@@ -76,7 +79,7 @@ type TemplatesCollection = {
   templates: Array<TemplateProps>;
 };
 
-type CanvasProps = Block & {
+interface PageProps extends Block {
   id: string;
   elements: Array<
     | TextBlockProps
@@ -85,13 +88,20 @@ type CanvasProps = Block & {
     | CircleProps
     | RectangleProps
   >;
-};
+}
 
 type HistoryCommands = {
   indexOfHistory: number;
-  history: Array<CanvasProps>;
+  history: Array<PageProps>;
 };
+type Colors = Array<string>;
 
+type Fonts = Array<string>;
+
+type DataMenuText = {
+  colors: Colors;
+  fonts: Fonts;
+};
 
 type MenuText = {
   value: string;
@@ -102,44 +112,32 @@ type MenuText = {
   italic: boolean;
   underline: boolean;
 };
-type DataMenuText = {
-  colors: Colors;
-  fonts: Fonts;
-};
-
-type Colors = Array<string>;
-
-type Fonts = Array<string>;
 
 type Doc = {
-  canvas: CanvasProps;
+  page: PageProps;
   templateCollection: TemplatesCollection;
   historyCommands: HistoryCommands;
   filterCollection: FilterCollection;
-  selectionArea: SelectionAreaProps;
   dataMenuText: DataMenuText;
   defaultMenuText: TextBlockProps;
 };
 
 export type {
+  PageProps,
   Doc,
-  TextBlockProps,
-  Coordinates,
-  Size,
-  Block,
-  GraphicObject,
-  ImageBlockProps,
-  CircleProps,
-  RectangleProps,
   FilterProps,
+  TextBlockProps,
+  RectangleProps,
+  CircleProps,
+  ImageBlockProps,
   SelectionAreaProps,
-  TemplateProps,
-  TemplatesCollection,
-  CanvasProps,
   HistoryCommands,
   FilterCollection,
-  MenuText,
-  DataMenuText,
+  TemplateProps,
+  TemplatesCollection,
+  Coordinates,
   Colors,
   Fonts,
+  MenuText,
+  DataMenuText,
 };

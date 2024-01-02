@@ -1,13 +1,6 @@
 import {
   Doc,
   TextBlockProps,
-  Coordinates,
-  Size,
-  Block,
-  GraphicObject,
-  ImageBlockProps,
-  CircleProps,
-  RectangleProps,
   FilterProps,
   SelectionAreaProps,
   TemplateProps,
@@ -15,6 +8,7 @@ import {
   PageProps,
   HistoryCommands,
   FilterCollection,
+  Colors, Fonts, DataMenuText
 } from "./types.tsx";
 
 const greenFilter: FilterProps = {
@@ -394,11 +388,10 @@ const defaultMenuText: TextBlockProps = {
 };
 
 const doc: Doc = {
-  canvas: historyCommands.history[historyCommands.indexOfHistory],
+  page: historyCommands.history[historyCommands.indexOfHistory],
   templateCollection,
   historyCommands,
   filterCollection,
-  selectionArea,
   dataMenuText,
   defaultMenuText,
 };

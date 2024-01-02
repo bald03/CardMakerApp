@@ -1,29 +1,29 @@
-import { TextBlockProps } from "../../types.tsx";
-import styles from "./text.module.css";
+import { useState } from "react";
 
-const TextBlockComponent = (data: TextBlockProps) => {
-  const textBlockData = {
-    id: data.id,
-    type: data.type,
-    data: data.value,
-  };
+import { TextBlockProps } from "../models/types";
 
+import style from "./textBlock.module.css";
+
+const TextBlock = (props: TextBlockProps) => {
+  // const [state, setState] = useState(props);
   const styleProps = {
-    width: `${data.width}px`,
-    height: `${data.height}px`,
-    fontSize: `${data.fontSize}px`,
-    fontFamily: `${data.fontFamily}`,
-    color: `${data.color}`,
-    fontWeight: data.bold ? "900" : "300",
-    top: `${data.yPos}px`,
-    left: `${data.xPos}px`,
+    fontSize: `${props.fontSize}px`,
+    fontFamily: `${props.fontFamily}, sans-serif`,
+    color: `${props.color}`,
+    fontWeight: props.bold ? "700" : "400",
+    fontStyle: props.italic ? "italic" : "normal",
+    textDecoration: props.underline ? "underline" : "none",
   };
 
   return (
-    <div style={styleProps} className={styles.text}>
-      {textBlockData.data}
+    <div
+      onClick={(e: React.MouseEvent) => e.preventDefault()}
+      className={style.textBlock}
+      style={styleProps}
+    >
+      {props.value}
     </div>
   );
 };
 
-export default TextBlockComponent;
+export default TextBlock;
