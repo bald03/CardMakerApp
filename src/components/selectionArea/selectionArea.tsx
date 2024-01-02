@@ -10,7 +10,7 @@ import { Dispatch, SetStateAction } from "react";
 
 import { useDnD } from "../../hooks/useDnD/useDnD";
 
-import ResizeArea from "../resizeArea/ResizeArea";
+import ResizeArea from "../ResizeArea/ResizeArea";
 
 import {
   PageProps,
