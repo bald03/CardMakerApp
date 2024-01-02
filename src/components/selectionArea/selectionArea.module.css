@@ -2,12 +2,12 @@
   display: inline-block;
   box-sizing: content-box;
   position: absolute;
-  border: 2px dashed #ff1493; /* изменен цвет и толщина пунктирной границы */
+  border: 2px dashed #0C8CE9;
   z-index: 1;
-  padding: 10px; /* добавлен отступ вокруг выделенной области */
-  background-color: rgba(255, 20, 147, 0.2); /* добавлен полупрозрачный фон */
-  border-radius: 8px; /* добавлены скругленные углы */
-  outline: none; /* убрана стандартная обводка */
+  padding: 10px;
+  background-color: rgba(167, 159, 163, 0.2);
+  border-radius: 8px;
+  outline: none;
 }
 
 .dndBlock {
@@ -17,7 +17,6 @@
   transform: translate(-50%, -50%);
   width: calc(99% - 5px);
   height: calc(99% - 5px);
-  /* background-color: rgba(0, 0, 0, 0.3); */
   z-index: 3;
 }
 
@@ -28,7 +27,6 @@
   transform: translate(-50%, -50%);
   width: calc(100% + 15px);
   height: calc(100% + 15px);
-  /* background-color: rgba(0, 200, 0, 0.3); */
   z-index: 2;
 }
 

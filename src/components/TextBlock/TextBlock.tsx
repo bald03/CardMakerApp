@@ -5,7 +5,6 @@ import { TextBlockProps } from "../Models/types";
 import style from "./textBlock.module.css";
 
 const TextBlock = (props: TextBlockProps) => {
-  // const [state, setState] = useState(props);
   const styleProps = {
     fontSize: `${props.fontSize}px`,
     fontFamily: `${props.fontFamily}, sans-serif`,

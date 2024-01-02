@@ -41,8 +41,8 @@ const Canvas = (props: PageProps) => {
               | RectangleProps
               | FilterProps
             >((res) => {
-              const pic = new Image(); // "Создаём" изображение
-              pic.src = element.url; // Источник изображения, позаимствовано на хабре
+              const pic = new Image();
+              pic.src = element.url;
               pic.onload = () => res({ ...element, pic: pic });
             });
           } else {
